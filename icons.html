@@ -1,0 +1,300 @@
+<!doctype html>
+<html class="h-full bg-white">
+<head>
+    <title>Projects</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="dist/css/style.css" rel="stylesheet">
+  <!--<link href="staticwebassets/assets/css/nova.css" rel="stylesheet">-->
+</head>
+<body class="h-full overflow-hidden">
+
+
+<div class="flex h-full">
+    <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+    <div class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
+      <!--
+        Off-canvas menu backdrop, show/hide based on off-canvas menu state.
+  
+        Entering: "transition-opacity ease-linear duration-300"
+          From: "opacity-0"
+          To: "opacity-100"
+        Leaving: "transition-opacity ease-linear duration-300"
+          From: "opacity-100"
+          To: "opacity-0"
+      -->
+      <div class="fixed inset-0 bg-gray-100 bg-opacity-75"></div>
+  
+      <div class="fixed inset-0 z-40 flex">
+        <!--
+          Off-canvas menu, show/hide based on off-canvas menu state.
+  
+          Entering: "transition ease-in-out duration-300 transform"
+            From: "-translate-x-full"
+            To: "translate-x-0"
+          Leaving: "transition ease-in-out duration-300 transform"
+            From: "translate-x-0"
+            To: "-translate-x-full"
+        -->
+        <div class="relative flex w-full max-w-xs flex-1 flex-col bg-white focus:outline-none">
+          <!--
+            Close button, show/hide based on off-canvas menu state.
+  
+            Entering: "ease-in-out duration-300"
+              From: "opacity-0"
+              To: "opacity-100"
+            Leaving: "ease-in-out duration-300"
+              From: "opacity-100"
+              To: "opacity-0"
+          -->
+          <div class="absolute top-0 right-0 -mr-12 pt-2">
+            <button type="button" class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+              <span class="sr-only">Close sidebar</span>
+              <!-- Heroicon name: outline/x-mark -->
+              <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+  
+          <div class="h-0 flex-1 overflow-y-auto pt-5 pb-4">
+            <div class="flex flex-shrink-0 items-center px-4">
+              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=amber&shade=500" alt="Your Company">
+            </div>
+            <nav aria-label="Sidebar" class="mt-5">
+              <div class="space-y-1 px-2">
+                <!-- Active: "bg-primary-50 text-primary-500", Default: "text-gray-800 hover:bg-gray-50" -->
+                  <a href="dashboard.html" class="text-gray-800 group flex items-center px-2 py-2 text-base font-medium rounded-md" aria-current="page">
+                  <!--
+                    Active: "text-primary-400", Default: "text-gray-400"
+                  -->
+                  <svg class="text-gray-400 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                  </svg>
+                  Dashboard
+                </a>
+  
+                <a href="projects.html" class="text-gray-800 hover:bg-gray-50 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                  <svg class="text-gray-400 mr-4 h-6 w-6"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <rect x="4" y="4" width="6" height="6" rx="1" />
+                    <rect x="14" y="4" width="6" height="6" rx="1" />
+                    <rect x="4" y="14" width="6" height="6" rx="1" />
+                    <path d="M14 17h6m-3 -3v6" />
+                  </svg>
+                  Projects
+                </a>
+  
+                <a href="table.html" class="text-gray-800 hover:bg-gray-50 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                  <svg class="text-gray-400 mr-4 h-6 w-6"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                    <line x1="4" y1="10" x2="20" y2="10" />
+                    <line x1="10" y1="4" x2="10" y2="20" />
+                  </svg>
+                  Table
+                </a>
+  
+                  <a href="charts.html" class="text-gray-800 hover:bg-gray-50 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                  <svg class="text-gray-400 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <rect x="3" y="4" width="18" height="12" rx="1" />
+                    <path d="M7 20h10" />
+                    <path d="M9 16v4" />
+                    <path d="M15 16v4" />
+                    <path d="M9 12v-4" />
+                    <path d="M12 12v-1" />
+                    <path d="M15 12v-2" />
+                    <path d="M12 12v-1" />
+                  </svg>
+                  Charts
+                </a>
+  
+                <a href="icons.html" class="bg-primary-50 text-primary-500 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                  <svg class="text-primary-400 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 3l-4 7h8z" />
+                    <circle cx="17" cy="17" r="3" />
+                    <rect x="4" y="14" width="6" height="6" rx="1" />
+                  </svg>
+                  Icons
+                </a>
+  
+              </div>
+              <hr class="my-5 border-t border-gray-100" aria-hidden="true">
+              <div class="space-y-1 px-2">
+  
+                <a href="settings.html" class="group flex items-center rounded-md px-2 py-2 text-base font-medium text-gray-800 hover:bg-gray-50">
+
+                  <svg class="text-gray-400 mr-4 h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                  Settings
+                </a>
+              </div>
+            </nav>
+          </div>
+          <div class="flex flex-shrink-0 border-t border-gray-100 p-4">
+            <a href="#" class="group block flex-shrink-0">
+              <div class="flex items-center">
+                <div>
+                  <img class="inline-block h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                </div>
+                <div class="ml-3">
+                  <p class="text-base font-medium text-gray-800 group-hover:text-gray-900">Tom Cook</p>
+                  <p class="text-sm font-medium text-gray-400 group-hover:text-gray-700">View profile</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+  
+        <div class="w-14 flex-shrink-0" aria-hidden="true">
+          <!-- Force sidebar to shrink to fit close icon -->
+        </div>
+      </div>
+    </div>
+  
+    <!-- Static sidebar for desktop -->
+    <div class="hidden lg:flex lg:flex-shrink-0">
+      <div class="flex w-64 flex-col">
+        <!-- Sidebar component, swap this element with another sidebar if you like -->
+        <div class="flex min-h-0 flex-1 flex-col border-r border-gray-100 bg-">
+          <div class="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
+            <div class="flex flex-shrink-0 items-center px-4">
+              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=amber&shade=500" alt="Your Company">
+            </div>
+            <nav class="mt-5 flex-1" aria-label="Sidebar">
+              <div class="space-y-1 px-2">
+                <!-- Active: "bg-primary-50 text-primary-500", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-800" -->
+                <a href="dashboard.html" class="text-gray-600 hover:bg-gray-50 hover:text-gray-800 group flex items-center px-2 py-2 text-sm font-medium rounded-md" aria-current="page">
+                   <!--
+                    Active: "text-primary-400", Default: "text-gray-400"
+                  -->
+                  <svg class="text-gray-400 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <polyline points="5 12 3 12 12 3 21 12 19 12" />
+                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                  </svg>
+                  Dashboard
+                </a>
+  
+                <a href="projects.html" class="text-gray-600 hover:bg-gray-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                  <svg class="text-gray-400 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <rect x="4" y="4" width="6" height="6" rx="1" />
+                    <rect x="14" y="4" width="6" height="6" rx="1" />
+                    <rect x="4" y="14" width="6" height="6" rx="1" />
+                    <path d="M14 17h6m-3 -3v6" />
+                  </svg>
+                  Projects
+                </a>
+  
+                <a href="table.html" class="text-gray-600 hover:bg-gray-50 hover:text-gray-800 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                  <svg class="text-gray-400 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                    <line x1="4" y1="10" x2="20" y2="10" />
+                    <line x1="10" y1="4" x2="10" y2="20" />
+                  </svg>
+                  Table
+                </a>
+  
+                  <a href="charts.html" class="text-gray-600 hover:bg-gray-50 hover:text-gray-800 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                  <svg class="text-gray-400 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <rect x="3" y="4" width="18" height="12" rx="1" />
+                    <path d="M7 20h10" />
+                    <path d="M9 16v4" />
+                    <path d="M15 16v4" />
+                    <path d="M9 12v-4" />
+                    <path d="M12 12v-1" />
+                    <path d="M15 12v-2" />
+                    <path d="M12 12v-1" />
+                  </svg>
+                  Charts
+                </a>
+  
+                <a href="icons.html" class="text-primary-500 bg-primary-50 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                  <svg class="text-primary-400 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 3l-4 7h8z" />
+                    <circle cx="17" cy="17" r="3" />
+                    <rect x="4" y="14" width="6" height="6" rx="1" />
+                  </svg>
+                  Icons
+                </a>
+              </div>
+              <hr class="my-5 border-t border-gray-100" aria-hidden="true">
+              <div class="flex-1 space-y-1 px-2">
+               
+  
+                <a href="settings.html" class="group flex items-center rounded-md px-2 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-800">
+                 <svg class="mr-3 h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                  Settings
+                </a>
+              </div>
+            </nav>
+          </div>
+          <div class="flex flex-shrink-0 border-t border-gray-100 p-4">
+            <a href="#" class="group block w-full flex-shrink-0">
+              <div class="flex items-center">
+                <div>
+                  <img class="inline-block h-9 w-9 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Tom Cook</p>
+                  <p class="text-xs font-medium text-gray-400 group-hover:text-gray-700">View profile</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex min-w-0 flex-1 flex-col overflow-hidden">
+      <div class="lg:hidden">
+        <div class="flex items-center justify-between border-b border-gray-100 bg-gray-50 px-4 py-1.5">
+          <div>
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=amber&shade=500" alt="Your Company">
+          </div>
+          <div>
+            <button type="button" class="-mr-3 inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-400 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-600">
+              <span class="sr-only">Open sidebar</span>
+              <!-- Heroicon name: outline/bars-3 -->
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="relative z-0 flex flex-1 overflow-hidden">
+        <main class="relative z-0 flex-1 overflow-y-auto focus:outline-none xl:order-last">
+          <!-- Breadcrumb -->
+          <nav class="flex items-start px-4 py-3 sm:px-6 lg:px-8 xl:hidden" aria-label="Breadcrumb">
+            <a href="#" class="inline-flex items-center space-x-3 text-sm font-medium text-gray-800">
+              <!-- Heroicon name: mini/chevron-left -->
+              <svg class="-ml-2 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" />
+              </svg>
+              <span>Directory</span>
+            </a>
+          </nav>
+  
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
