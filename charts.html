@@ -279,7 +279,7 @@
           </div>
         </div>
       </div>
-      <div class="relative z-0 flex flex-1 overflow-hidden">
+      <div class="relative z-0 flex flex-1 overflow-hidden bg-gray-50">
         <main class="relative z-0 flex-1 overflow-y-auto focus:outline-none xl:order-last">
           <div class="p-4 sm:p-6 lg:p-8">
             <div class="sm:flex sm:items-center">
@@ -290,13 +290,292 @@
             <div class="sm:pt-4 md:pt-8 sm:flex sm:items-center">
               <div class="sm:flex-auto">
                 <h2 class="text-xl font-semibold text-gray-800">Section title</h2>
-                <p class="mt-2 text-sm text-gray-600">A list of all the users in your account including their name, title, email and role.</p>
-              </div>
-              <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-                <button type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-primary-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-rpimary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 sm:w-auto">Add user</button>
+                <p class="text-sm text-gray-400">A list of all the users in your account including their name, title, email and role.</p>
               </div>
             </div>
+
+
+<div>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/highcharts-more.js"></script>
+  <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
   
+  <style>
+    #container {
+      max-width: 400px;
+      margin: 0 auto;
+  }
+  
+  .highcharts-figure,
+  .highcharts-data-table table {
+      min-width: 380px;
+      max-width: 600px;
+      margin: 0 auto;
+  }
+  
+  .highcharts-data-table table {
+      font-family: Verdana, sans-serif;
+      border-collapse: collapse;
+      border: 1px solid #ebebeb;
+      margin: 10px auto;
+      text-align: center;
+      width: 100%;
+      max-width: 500px;
+  }
+  
+  .highcharts-data-table caption {
+      padding: 1em 0;
+      font-size: 1.2em;
+      color: #555;
+  }
+  
+  .highcharts-data-table th {
+      font-weight: 600;
+      padding: 0.5em;
+  }
+  
+  .highcharts-data-table td,
+  .highcharts-data-table th,
+  .highcharts-data-table caption {
+      padding: 0.5em;
+  }
+  
+  .highcharts-data-table thead tr,
+  .highcharts-data-table tr:nth-child(even) {
+      background: #f8f8f8;
+  }
+  
+  .highcharts-data-table tr:hover {
+      background: #f1f7ff;
+  }
+  </style>
+</div>
+           
+<ul role="list" class="grid grid-cols-1 gap-6 xl:grid-cols-2 mt-4">
+  <li class="col-span-1 divide-y divide-gray-100 rounded-2xl bg-white shadow">
+    <div class="flex w-full items-center justify-between space-x-6 p-6">
+      
+        <figure class="highcharts-figure">
+          <div id="container"></div>
+          <p class="highcharts-description text-sm text-gray-400">
+              A chart showing multiple gauge series arcing around the center point,
+              similar to the activity chart found on the Apple Watch. Each gauge has a
+              custom icon, and the tooltip is positioned statically in the center.
+          </p>
+      </figure>
+    </div>
+  </li>
+  <li class="col-span-1 divide-y divide-gray-100 rounded-2xl bg-white shadow">
+    <div class="flex w-full items-center justify-between space-x-6 p-6">
+      
+        <figure class="highcharts-figure2">
+          <div id="container2"></div>
+          <p class="highcharts-description text-sm text-gray-400">
+            Pie chart showing a hollow semi-circle. This is a compact visualization, often used in dashboards.
+          </p>
+      </figure>
+    </div>
+  </li>
+</ul>
+      
+
+
+
+<script>// Uncomment to style it like Apple Watch
+  
+  if (!Highcharts.theme) {
+      Highcharts.setOptions({
+          chart: {
+              backgroundColor: 'transparent'
+          },
+          colors: ['#E75420', '#FFC100', '#258998'],
+          title: {
+              style: {
+                  color: '#617177'
+              }
+          },
+          tooltip: {
+              style: {
+                  color: '#617177'
+              }
+          }
+      });
+  }
+  // 
+  
+  /**
+   * In the chart render event, add icons on top of the circular shapes
+   */
+  
+  Highcharts.chart('container', {
+  
+      chart: {
+          type: 'solidgauge',
+          height: '110%'
+      },
+  
+      title: {
+          text: 'Type of Energy',
+          style: {
+              fontSize: '14px'
+          }
+      },
+  
+      tooltip: {
+          borderWidth: 0,
+          backgroundColor: 'none',
+          shadow: false,
+          style: {
+              fontSize: '14px'
+          },
+          valueSuffix: '%',
+          pointFormat: '{series.name}<br><span style="font-size:2em; color: {point.color}; font-weight: bold">{point.y}</span>',
+          positioner: function (labelWidth) {
+              return {
+                  x: (this.chart.chartWidth - labelWidth) / 2,
+                  y: (this.chart.plotHeight / 2) + 15
+              };
+          }
+      },
+  
+      pane: {
+          startAngle: 0,
+          endAngle: 360,
+          background: [{ // Track for Move
+              outerRadius: '112%',
+              innerRadius: '88%',
+              backgroundColor: Highcharts.color(Highcharts.getOptions().colors[0])
+                  .setOpacity(0.3)
+                  .get(),
+              borderWidth: 0
+          }, { // Track for Exercise
+              outerRadius: '87%',
+              innerRadius: '63%',
+              backgroundColor: Highcharts.color(Highcharts.getOptions().colors[1])
+                  .setOpacity(0.3)
+                  .get(),
+              borderWidth: 0
+          }, { // Track for Stand
+              outerRadius: '62%',
+              innerRadius: '38%',
+              backgroundColor: Highcharts.color(Highcharts.getOptions().colors[2])
+                  .setOpacity(0.3)
+                  .get(),
+              borderWidth: 0
+          }]
+      },
+  
+      yAxis: {
+          min: 0,
+          max: 100,
+          lineWidth: 0,
+          tickPositions: []
+      },
+  
+      plotOptions: {
+          solidgauge: {
+              dataLabels: {
+                  enabled: false
+              },
+              linecap: 'round',
+              stickyTracking: false,
+              rounded: true
+          }
+      },
+      series: [{
+          name: 'Electricity',
+          data: [{
+              color: Highcharts.getOptions().colors[0],
+              radius: '112%',
+              innerRadius: '88%',
+              y: 80
+          }]
+      }, {
+          name: 'Gaz',
+          data: [{
+              color: Highcharts.getOptions().colors[1],
+              radius: '87%',
+              innerRadius: '63%',
+              y: 65
+          }]
+      }, {
+          name: 'Other',
+          data: [{
+              color: Highcharts.getOptions().colors[2],
+              radius: '62%',
+              innerRadius: '38%',
+              y: 50
+          }]
+      }]
+  });
+  </script>
+  <script>
+    // Data retrieved from https://netmarketshare.com/
+Highcharts.chart('container2', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: 0,
+        plotShadow: false
+    },
+    title: {
+        text: 'Site<br>Consumption<br>2022',
+        align: 'center',
+        verticalAlign: 'middle',
+        y: 60,
+        style: {
+            fontSize: '14px'
+        }
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    plotOptions: {
+        pie: {
+            dataLabels: {
+                enabled: true,
+                distance: -50,
+                style: {
+                    fontWeight: 'bold',
+                    color: 'white'
+                }
+            },
+            startAngle: -90,
+            endAngle: 90,
+            center: ['50%', '75%'],
+            size: '110%'
+        }
+    },
+    series: [{
+        type: 'pie',
+        name: 'Consumption share',
+        innerSize: '50%',
+        data: [
+            ['Product line 1', 73.86],
+            ['Line 2', 11.97],
+            ['Line 3', 5.52],
+            ['Line 4', 2.98],
+            ['Line 5', 1.90],
+            {
+                name: 'Other',
+                y: 3.77,
+                dataLabels: {
+                    enabled: false
+                }
+            }
+        ]
+    }]
+});
+  </script>
         </main>
       </div>
     </div>
