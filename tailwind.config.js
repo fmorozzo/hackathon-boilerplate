@@ -3,7 +3,7 @@ module.exports = {
   content: [
     './index.html',
     './charts.html',
-    './dashboard.html',
+    './home.html',
     './icons.html',
     './projects.html',
     './sidebar.html',

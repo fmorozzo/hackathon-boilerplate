@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="h-full bg-white">
 <head>
-    <title>Table</title>
+  <title>Table</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--<script src="https://cdn.tailwindcss.com"></script>-->
@@ -65,7 +65,7 @@
             <nav aria-label="Sidebar" class="mt-5">
               <div class="space-y-1 px-2">
                 <!-- Active: "bg-primary-50 text-primary-500", Default: "text-gray-800 hover:bg-gray-50" -->
-                  <a href="dashboard.html" class="text-gray-800 hover:bg-gray-50 group flex items-center px-2 py-2 text-base font-medium rounded-md" aria-current="page">
+                  <a href="home.html" class="text-gray-800 hover:bg-gray-50 group flex items-center px-2 py-2 text-base font-medium rounded-md" aria-current="page">
                   <!--
                     Active: "text-primary-400", Default: "text-gray-600"
                   -->
@@ -75,7 +75,7 @@
                     <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
                     <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
                   </svg>
-                  Dashboard
+                  Home
                 </a>
   
                 <a href="projects.html" class="text-gray-800 hover:bg-gray-50 group flex items-center px-2 py-2 text-base font-medium rounded-md">
@@ -165,7 +165,7 @@
     <div class="hidden lg:flex lg:flex-shrink-0">
       <div class="flex w-64 flex-col">
         <!-- Sidebar component, swap this element with another sidebar if you like -->
-        <div class="flex min-h-0 flex-1 flex-col border-r border-gray-200">
+        <div class="flex min-h-0 flex-1 flex-col border-r border-gray-100">
           <div class="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
             <div class="flex flex-shrink-0 items-center px-4">
               <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=amber&shade=500" alt="Your Company">
@@ -173,7 +173,7 @@
             <nav class="mt-5 flex-1" aria-label="Sidebar">
               <div class="space-y-1 px-2">
                 <!-- Current: "bg-gray-200 text-gray-800", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-800" -->
-                  <a href="dashboard.html" class="text-gray-600 hover:bg-gray-50 hover:text-gray-800 group flex items-center px-2 py-2 text-sm font-medium rounded-md" aria-current="page">
+                  <a href="home.html" class="text-gray-600 hover:bg-gray-50 hover:text-gray-800 group flex items-center px-2 py-2 text-sm font-medium rounded-md" aria-current="page">
                   <!--
                     Current: "text-gray-600", Default: "text-gray-600 group-hover:text-gray-600"
                   -->
@@ -183,7 +183,7 @@
                     <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
                     <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
                   </svg>
-                  Dashboard
+                  Home
                 </a>
   
                 <a href="projects.html" class="text-gray-600 hover:bg-gray-50 hover:text-gray-800 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
@@ -281,7 +281,7 @@
         </div>
       </div>
 
-      <div class="relative z-0 flex flex-1 overflow-hidden bg-gray-100">
+      <div class="relative z-0 flex flex-1 overflow-hidden bg-gray-50">
         <main class="relative z-0 flex-1 overflow-y-auto focus:outline-none xl:order-last">
         <div class="p-4 sm:p-6 lg:p-8">
           <div class="sm:flex sm:items-center">
@@ -303,13 +303,13 @@
               <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                 <div class="overflow-hidden shadow-sm md:rounded-lg">
                   <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-50">
+                    <thead class="bg-white">
                       <tr>
-                        <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-800 sm:pl-6">Name</th>
-                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-800">Title</th>
-                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-800">Status</th>
-                        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-800">Role</th>
-                        <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
+                        <th scope="col" class="py-4 pl-4 pr-3 text-left text-sm font-semibold text-gray-800 sm:pl-6">Name</th>
+                        <th scope="col" class="px-3 py-4 text-left text-sm font-semibold text-gray-800">Title</th>
+                        <th scope="col" class="px-3 py-4 text-left text-sm font-semibold text-gray-800">Status</th>
+                        <th scope="col" class="px-3 py-4 text-left text-sm font-semibold text-gray-800">Role</th>
+                        <th scope="col" class="relative py-4 pl-3 pr-4 sm:pr-6">
                           <span class="sr-only">Edit</span>
                         </th>
                       </tr>
@@ -531,8 +531,6 @@
                           <a href="#" class="text-primary-500 hover:text-primary-500">Edit<span class="sr-only">, Lindsay Walton</span></a>
                         </td>
                       </tr>
-        
-                      <!-- More people... -->
                     </tbody>
                   </table>
                 </div>
